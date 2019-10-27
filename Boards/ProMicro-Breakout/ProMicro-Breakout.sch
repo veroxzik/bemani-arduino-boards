@@ -1,0 +1,1175 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x12 J7
+U 1 1 5D29F4F8
+P 4450 1700
+F 0 "J7" H 4400 2350 50  0000 L CNN
+F 1 "Conn_01x12" H 4530 1601 50  0001 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical" H 4450 1700 50  0001 C CNN
+F 3 "~" H 4450 1700 50  0001 C CNN
+	1    4450 1700
+	1    0    0    -1  
+$EndComp
+Text Notes 4550 1200 0    50   ~ 0
+1/TX
+Text Notes 4550 1300 0    50   ~ 0
+0/RX
+Text Notes 4550 1400 0    50   ~ 0
+GND
+Text Notes 4550 1500 0    50   ~ 0
+GND
+Text Notes 4550 1600 0    50   ~ 0
+2
+Text Notes 4550 1700 0    50   ~ 0
+3
+Text Notes 4550 1800 0    50   ~ 0
+4
+Text Notes 4550 1900 0    50   ~ 0
+5
+Text Notes 4550 2000 0    50   ~ 0
+6
+Text Notes 4550 2100 0    50   ~ 0
+7
+Text Notes 4550 2200 0    50   ~ 0
+8
+Text Notes 4550 2300 0    50   ~ 0
+9
+$Comp
+L Connector_Generic:Conn_01x12 J10
+U 1 1 5D29F60D
+P 5200 1700
+F 0 "J10" H 5150 2350 50  0000 L CNN
+F 1 "Conn_01x12" H 5280 1601 50  0001 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical" H 5200 1700 50  0001 C CNN
+F 3 "~" H 5200 1700 50  0001 C CNN
+	1    5200 1700
+	-1   0    0    -1  
+$EndComp
+Text Notes 5100 1200 2    50   ~ 0
+RAW
+Text Notes 5100 1300 2    50   ~ 0
+GND
+Text Notes 5100 1400 2    50   ~ 0
+RST
+Text Notes 5100 1500 2    50   ~ 0
+VCC
+Text Notes 5100 1600 2    50   ~ 0
+21
+Text Notes 5100 1700 2    50   ~ 0
+20
+Text Notes 5100 1800 2    50   ~ 0
+19
+Text Notes 5100 1900 2    50   ~ 0
+18
+Text Notes 5100 2000 2    50   ~ 0
+15
+Text Notes 5100 2100 2    50   ~ 0
+14
+Text Notes 5100 2200 2    50   ~ 0
+16
+Text Notes 5100 2300 2    50   ~ 0
+10
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5D29F73D
+P 1150 1250
+F 0 "J1" H 1100 1500 50  0000 L CNN
+F 1 "Conn_01x04" H 1230 1151 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 1150 1250 50  0001 C CNN
+F 3 "~" H 1150 1250 50  0001 C CNN
+	1    1150 1250
+	-1   0    0    -1  
+$EndComp
+Text Notes 850  1300 0    50   ~ 0
+QE1
+$Comp
+L power:+5V #PWR0101
+U 1 1 5D29F920
+P 1750 1300
+F 0 "#PWR0101" H 1750 1150 50  0001 C CNN
+F 1 "+5V" H 1765 1473 50  0000 C CNN
+F 2 "" H 1750 1300 50  0001 C CNN
+F 3 "" H 1750 1300 50  0001 C CNN
+	1    1750 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 1200 4250 1200
+Text Label 4000 1200 0    50   ~ 0
+PIN1
+Wire Wire Line
+	3950 1300 4250 1300
+Text Label 4000 1300 0    50   ~ 0
+PIN0
+Wire Wire Line
+	3950 1600 4250 1600
+Text Label 4000 1600 0    50   ~ 0
+PIN2
+Wire Wire Line
+	3950 1700 4250 1700
+Text Label 4000 1700 0    50   ~ 0
+PIN3
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 5D2A010C
+P 1150 2000
+F 0 "J2" H 1100 2250 50  0000 L CNN
+F 1 "Conn_01x04" H 1230 1901 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 1150 2000 50  0001 C CNN
+F 3 "~" H 1150 2000 50  0001 C CNN
+	1    1150 2000
+	-1   0    0    -1  
+$EndComp
+Text Notes 850  2050 0    50   ~ 0
+QE2
+$Comp
+L Transistor_FET:BSS138 Q1
+U 1 1 5D2A068C
+P 1900 3550
+F 0 "Q1" H 1800 3400 50  0000 R CNN
+F 1 "Si2302CDS" H 1800 3300 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 2100 3475 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1900 3550 50  0001 L CNN
+	1    1900 3550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1150 1600 1150
+Text Label 1350 1150 0    50   ~ 0
+QE1A
+Wire Wire Line
+	1350 1250 1600 1250
+Text Label 1350 1250 0    50   ~ 0
+QE1B
+Wire Wire Line
+	1350 1900 1600 1900
+Text Label 1350 1900 0    50   ~ 0
+QE2A
+Wire Wire Line
+	1350 2000 1600 2000
+Text Label 1350 2000 0    50   ~ 0
+QE2B
+$Comp
+L power:GND #PWR0102
+U 1 1 5D29F8C5
+P 1750 1500
+F 0 "#PWR0102" H 1750 1250 50  0001 C CNN
+F 1 "GND" H 1755 1327 50  0000 C CNN
+F 2 "" H 1750 1500 50  0001 C CNN
+F 3 "" H 1750 1500 50  0001 C CNN
+	1    1750 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1350 1750 1350
+Wire Wire Line
+	1750 1350 1750 1300
+Wire Wire Line
+	1350 1450 1750 1450
+Wire Wire Line
+	1750 1500 1750 1450
+$Comp
+L power:+5V #PWR0103
+U 1 1 5D2A30DE
+P 1750 2050
+F 0 "#PWR0103" H 1750 1900 50  0001 C CNN
+F 1 "+5V" H 1765 2223 50  0000 C CNN
+F 2 "" H 1750 2050 50  0001 C CNN
+F 3 "" H 1750 2050 50  0001 C CNN
+	1    1750 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5D2A30E4
+P 1750 2250
+F 0 "#PWR0104" H 1750 2000 50  0001 C CNN
+F 1 "GND" H 1755 2077 50  0000 C CNN
+F 2 "" H 1750 2250 50  0001 C CNN
+F 3 "" H 1750 2250 50  0001 C CNN
+	1    1750 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 2100 1750 2100
+Wire Wire Line
+	1750 2100 1750 2050
+Wire Wire Line
+	1350 2200 1750 2200
+Wire Wire Line
+	1750 2250 1750 2200
+$Comp
+L Connector_Generic:Conn_01x04 J3
+U 1 1 5D2A32A6
+P 1150 3150
+F 0 "J3" H 1100 3400 50  0000 L CNN
+F 1 "Conn_01x04" H 1230 3051 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 1150 3150 50  0001 C CNN
+F 3 "~" H 1150 3150 50  0001 C CNN
+	1    1150 3150
+	-1   0    0    -1  
+$EndComp
+Text Notes 850  3200 0    50   ~ 0
+B1
+Wire Wire Line
+	1350 3050 1700 3050
+Text Label 1550 3050 0    50   ~ 0
+B1
+Wire Wire Line
+	1350 3250 1700 3250
+Text Label 1450 3250 0    50   ~ 0
+LED+
+$Comp
+L power:GND #PWR0105
+U 1 1 5D2A4F97
+P 1450 3450
+F 0 "#PWR0105" H 1450 3200 50  0001 C CNN
+F 1 "GND" H 1455 3277 50  0000 C CNN
+F 2 "" H 1450 3450 50  0001 C CNN
+F 3 "" H 1450 3450 50  0001 C CNN
+	1    1450 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 3550 2400 3550
+Text Label 2100 3550 0    50   ~ 0
+B1LED
+$Comp
+L power:GND #PWR0106
+U 1 1 5D2A5F15
+P 1800 3800
+F 0 "#PWR0106" H 1800 3550 50  0001 C CNN
+F 1 "GND" H 1805 3627 50  0000 C CNN
+F 2 "" H 1800 3800 50  0001 C CNN
+F 3 "" H 1800 3800 50  0001 C CNN
+	1    1800 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3750 1800 3800
+Wire Wire Line
+	1350 3350 1450 3350
+Wire Wire Line
+	1450 3350 1450 3450
+Wire Wire Line
+	3950 1800 4250 1800
+Text Label 4000 1800 0    50   ~ 0
+B5LED
+Wire Wire Line
+	4250 1900 3950 1900
+Text Label 4000 1900 0    50   ~ 0
+B5
+Wire Wire Line
+	3950 2000 4250 2000
+Text Label 4000 2000 0    50   ~ 0
+B6LED
+Wire Wire Line
+	4250 2100 3950 2100
+Text Label 4000 2100 0    50   ~ 0
+B6
+Wire Wire Line
+	3950 2200 4250 2200
+Text Label 4000 2200 0    50   ~ 0
+B7LED
+Wire Wire Line
+	4250 2300 3950 2300
+Text Label 4000 2300 0    50   ~ 0
+B7
+Wire Wire Line
+	5700 1600 5400 1600
+Text Label 5650 1600 2    50   ~ 0
+B1LED
+Wire Wire Line
+	5400 1700 5700 1700
+Text Label 5650 1700 2    50   ~ 0
+B1
+Wire Wire Line
+	5700 1800 5400 1800
+Text Label 5650 1800 2    50   ~ 0
+B2LED
+Wire Wire Line
+	5400 1900 5700 1900
+Text Label 5650 1900 2    50   ~ 0
+B2
+Wire Wire Line
+	5700 2000 5400 2000
+Text Label 5650 2000 2    50   ~ 0
+B3LED
+Wire Wire Line
+	5400 2100 5700 2100
+Text Label 5650 2100 2    50   ~ 0
+B3
+Wire Wire Line
+	5700 2200 5400 2200
+Text Label 5650 2200 2    50   ~ 0
+B4LED
+Wire Wire Line
+	5400 2300 5700 2300
+Text Label 5650 2300 2    50   ~ 0
+B4
+$Comp
+L Transistor_FET:BSS138 Q2
+U 1 1 5D2B56F7
+P 1900 4900
+F 0 "Q2" H 1800 4750 50  0000 R CNN
+F 1 "Si2302CDS" H 1800 4650 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 2100 4825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1900 4900 50  0001 L CNN
+	1    1900 4900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 5D2B56FE
+P 1150 4500
+F 0 "J4" H 1100 4750 50  0000 L CNN
+F 1 "Conn_01x04" H 1230 4401 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 1150 4500 50  0001 C CNN
+F 3 "~" H 1150 4500 50  0001 C CNN
+	1    1150 4500
+	-1   0    0    -1  
+$EndComp
+Text Notes 850  4550 0    50   ~ 0
+B2
+Wire Wire Line
+	1350 4400 1700 4400
+Text Label 1550 4400 0    50   ~ 0
+B2
+Text Label 1450 4600 0    50   ~ 0
+LED+
+$Comp
+L power:GND #PWR0107
+U 1 1 5D2B570A
+P 1450 4800
+F 0 "#PWR0107" H 1450 4550 50  0001 C CNN
+F 1 "GND" H 1455 4627 50  0000 C CNN
+F 2 "" H 1450 4800 50  0001 C CNN
+F 3 "" H 1450 4800 50  0001 C CNN
+	1    1450 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4900 2400 4900
+Text Label 2100 4900 0    50   ~ 0
+B2LED
+$Comp
+L power:GND #PWR0108
+U 1 1 5D2B5713
+P 1800 5150
+F 0 "#PWR0108" H 1800 4900 50  0001 C CNN
+F 1 "GND" H 1805 4977 50  0000 C CNN
+F 2 "" H 1800 5150 50  0001 C CNN
+F 3 "" H 1800 5150 50  0001 C CNN
+	1    1800 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 5100 1800 5150
+Wire Wire Line
+	1350 4600 1700 4600
+Wire Wire Line
+	1350 4700 1450 4700
+Wire Wire Line
+	1450 4700 1450 4800
+$Comp
+L Transistor_FET:BSS138 Q3
+U 1 1 5D2B6CB5
+P 3850 3550
+F 0 "Q3" H 3750 3400 50  0000 R CNN
+F 1 "Si2302CDS" H 3750 3300 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 4050 3475 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 3850 3550 50  0001 L CNN
+	1    3850 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 5D2B6CBC
+P 3100 3150
+F 0 "J5" H 3050 3400 50  0000 L CNN
+F 1 "Conn_01x04" H 3180 3051 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 3100 3150 50  0001 C CNN
+F 3 "~" H 3100 3150 50  0001 C CNN
+	1    3100 3150
+	-1   0    0    -1  
+$EndComp
+Text Notes 2800 3200 0    50   ~ 0
+B3
+Wire Wire Line
+	3300 3050 3650 3050
+Text Label 3500 3050 0    50   ~ 0
+B3
+Text Label 3400 3250 0    50   ~ 0
+LED+
+$Comp
+L power:GND #PWR0109
+U 1 1 5D2B6CC8
+P 3400 3450
+F 0 "#PWR0109" H 3400 3200 50  0001 C CNN
+F 1 "GND" H 3405 3277 50  0000 C CNN
+F 2 "" H 3400 3450 50  0001 C CNN
+F 3 "" H 3400 3450 50  0001 C CNN
+	1    3400 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 3550 4350 3550
+Text Label 4050 3550 0    50   ~ 0
+B3LED
+$Comp
+L power:GND #PWR0110
+U 1 1 5D2B6CD1
+P 3750 3800
+F 0 "#PWR0110" H 3750 3550 50  0001 C CNN
+F 1 "GND" H 3755 3627 50  0000 C CNN
+F 2 "" H 3750 3800 50  0001 C CNN
+F 3 "" H 3750 3800 50  0001 C CNN
+	1    3750 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 3750 3750 3800
+Wire Wire Line
+	3300 3250 3650 3250
+Wire Wire Line
+	3300 3350 3400 3350
+Wire Wire Line
+	3400 3350 3400 3450
+$Comp
+L Transistor_FET:BSS138 Q4
+U 1 1 5D2B6CDB
+P 3850 4900
+F 0 "Q4" H 3750 4750 50  0000 R CNN
+F 1 "Si2302CDS" H 3750 4650 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 4050 4825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 3850 4900 50  0001 L CNN
+	1    3850 4900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J6
+U 1 1 5D2B6CE2
+P 3100 4500
+F 0 "J6" H 3050 4750 50  0000 L CNN
+F 1 "Conn_01x04" H 3180 4401 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 3100 4500 50  0001 C CNN
+F 3 "~" H 3100 4500 50  0001 C CNN
+	1    3100 4500
+	-1   0    0    -1  
+$EndComp
+Text Notes 2800 4550 0    50   ~ 0
+B4
+Wire Wire Line
+	3300 4400 3650 4400
+Text Label 3500 4400 0    50   ~ 0
+B4
+Text Label 3400 4600 0    50   ~ 0
+LED+
+$Comp
+L power:GND #PWR0111
+U 1 1 5D2B6CEE
+P 3400 4800
+F 0 "#PWR0111" H 3400 4550 50  0001 C CNN
+F 1 "GND" H 3405 4627 50  0000 C CNN
+F 2 "" H 3400 4800 50  0001 C CNN
+F 3 "" H 3400 4800 50  0001 C CNN
+	1    3400 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4900 4350 4900
+Text Label 4050 4900 0    50   ~ 0
+B4LED
+$Comp
+L power:GND #PWR0112
+U 1 1 5D2B6CF7
+P 3750 5150
+F 0 "#PWR0112" H 3750 4900 50  0001 C CNN
+F 1 "GND" H 3755 4977 50  0000 C CNN
+F 2 "" H 3750 5150 50  0001 C CNN
+F 3 "" H 3750 5150 50  0001 C CNN
+	1    3750 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5100 3750 5150
+Wire Wire Line
+	3300 4600 3650 4600
+Wire Wire Line
+	3300 4700 3400 4700
+Wire Wire Line
+	3400 4700 3400 4800
+$Comp
+L Transistor_FET:BSS138 Q5
+U 1 1 5D2B7FE6
+P 5900 3600
+F 0 "Q5" H 5800 3450 50  0000 R CNN
+F 1 "Si2302CDS" H 5800 3350 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 6100 3525 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 5900 3600 50  0001 L CNN
+	1    5900 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J8
+U 1 1 5D2B7FED
+P 5150 3200
+F 0 "J8" H 5100 3450 50  0000 L CNN
+F 1 "Conn_01x04" H 5230 3101 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 5150 3200 50  0001 C CNN
+F 3 "~" H 5150 3200 50  0001 C CNN
+	1    5150 3200
+	-1   0    0    -1  
+$EndComp
+Text Notes 4850 3250 0    50   ~ 0
+B5
+Wire Wire Line
+	5350 3100 5700 3100
+Text Label 5550 3100 0    50   ~ 0
+B5
+Text Label 5450 3300 0    50   ~ 0
+LED+
+$Comp
+L power:GND #PWR0113
+U 1 1 5D2B7FF9
+P 5450 3500
+F 0 "#PWR0113" H 5450 3250 50  0001 C CNN
+F 1 "GND" H 5455 3327 50  0000 C CNN
+F 2 "" H 5450 3500 50  0001 C CNN
+F 3 "" H 5450 3500 50  0001 C CNN
+	1    5450 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3600 6400 3600
+Text Label 6100 3600 0    50   ~ 0
+B5LED
+$Comp
+L power:GND #PWR0114
+U 1 1 5D2B8002
+P 5800 3850
+F 0 "#PWR0114" H 5800 3600 50  0001 C CNN
+F 1 "GND" H 5805 3677 50  0000 C CNN
+F 2 "" H 5800 3850 50  0001 C CNN
+F 3 "" H 5800 3850 50  0001 C CNN
+	1    5800 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3800 5800 3850
+Wire Wire Line
+	5350 3300 5700 3300
+Wire Wire Line
+	5350 3400 5450 3400
+Wire Wire Line
+	5450 3400 5450 3500
+$Comp
+L Transistor_FET:BSS138 Q6
+U 1 1 5D2B800C
+P 5900 4950
+F 0 "Q6" H 5800 4800 50  0000 R CNN
+F 1 "Si2302CDS" H 5800 4700 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 6100 4875 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 5900 4950 50  0001 L CNN
+	1    5900 4950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J9
+U 1 1 5D2B8013
+P 5150 4550
+F 0 "J9" H 5100 4800 50  0000 L CNN
+F 1 "Conn_01x04" H 5230 4451 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 5150 4550 50  0001 C CNN
+F 3 "~" H 5150 4550 50  0001 C CNN
+	1    5150 4550
+	-1   0    0    -1  
+$EndComp
+Text Notes 4850 4600 0    50   ~ 0
+B6
+Wire Wire Line
+	5350 4450 5700 4450
+Text Label 5550 4450 0    50   ~ 0
+B6
+Text Label 5450 4650 0    50   ~ 0
+LED+
+$Comp
+L power:GND #PWR0115
+U 1 1 5D2B801F
+P 5450 4850
+F 0 "#PWR0115" H 5450 4600 50  0001 C CNN
+F 1 "GND" H 5455 4677 50  0000 C CNN
+F 2 "" H 5450 4850 50  0001 C CNN
+F 3 "" H 5450 4850 50  0001 C CNN
+	1    5450 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 4950 6400 4950
+Text Label 6100 4950 0    50   ~ 0
+B6LED
+$Comp
+L power:GND #PWR0116
+U 1 1 5D2B8028
+P 5800 5200
+F 0 "#PWR0116" H 5800 4950 50  0001 C CNN
+F 1 "GND" H 5805 5027 50  0000 C CNN
+F 2 "" H 5800 5200 50  0001 C CNN
+F 3 "" H 5800 5200 50  0001 C CNN
+	1    5800 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 5150 5800 5200
+Wire Wire Line
+	5350 4650 5700 4650
+Wire Wire Line
+	5350 4750 5450 4750
+Wire Wire Line
+	5450 4750 5450 4850
+$Comp
+L Transistor_FET:BSS138 Q7
+U 1 1 5D2B8032
+P 7850 3600
+F 0 "Q7" H 7750 3450 50  0000 R CNN
+F 1 "Si2302CDS" H 7750 3350 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 8050 3525 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 7850 3600 50  0001 L CNN
+	1    7850 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J11
+U 1 1 5D2B8039
+P 7100 3200
+F 0 "J11" H 7050 3450 50  0000 L CNN
+F 1 "Conn_01x04" H 7180 3101 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 7100 3200 50  0001 C CNN
+F 3 "~" H 7100 3200 50  0001 C CNN
+	1    7100 3200
+	-1   0    0    -1  
+$EndComp
+Text Notes 6800 3250 0    50   ~ 0
+B7
+Wire Wire Line
+	7300 3100 7650 3100
+Text Label 7500 3100 0    50   ~ 0
+B7
+Text Label 7400 3300 0    50   ~ 0
+LED+
+$Comp
+L power:GND #PWR0117
+U 1 1 5D2B8045
+P 7400 3500
+F 0 "#PWR0117" H 7400 3250 50  0001 C CNN
+F 1 "GND" H 7405 3327 50  0000 C CNN
+F 2 "" H 7400 3500 50  0001 C CNN
+F 3 "" H 7400 3500 50  0001 C CNN
+	1    7400 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3600 8350 3600
+Text Label 8050 3600 0    50   ~ 0
+B7LED
+$Comp
+L power:GND #PWR0118
+U 1 1 5D2B804E
+P 7750 3850
+F 0 "#PWR0118" H 7750 3600 50  0001 C CNN
+F 1 "GND" H 7755 3677 50  0000 C CNN
+F 2 "" H 7750 3850 50  0001 C CNN
+F 3 "" H 7750 3850 50  0001 C CNN
+	1    7750 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3800 7750 3850
+Wire Wire Line
+	7300 3300 7650 3300
+Wire Wire Line
+	7300 3400 7400 3400
+Wire Wire Line
+	7400 3400 7400 3500
+$Comp
+L Transistor_FET:BSS138 Q8
+U 1 1 5D2B8058
+P 7850 4950
+F 0 "Q8" H 7750 4800 50  0000 R CNN
+F 1 "Si2302CDS" H 7750 4700 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 8050 4875 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 7850 4950 50  0001 L CNN
+	1    7850 4950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J12
+U 1 1 5D2B805F
+P 7100 4550
+F 0 "J12" H 7050 4800 50  0000 L CNN
+F 1 "Conn_01x04" H 7180 4451 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 7100 4550 50  0001 C CNN
+F 3 "~" H 7100 4550 50  0001 C CNN
+	1    7100 4550
+	-1   0    0    -1  
+$EndComp
+Text Notes 6800 4600 0    50   ~ 0
+B8
+Wire Wire Line
+	7300 4450 7650 4450
+Text Label 7500 4450 0    50   ~ 0
+B8
+Text Label 7400 4650 0    50   ~ 0
+LED+
+$Comp
+L power:GND #PWR0119
+U 1 1 5D2B806B
+P 7400 4850
+F 0 "#PWR0119" H 7400 4600 50  0001 C CNN
+F 1 "GND" H 7405 4677 50  0000 C CNN
+F 2 "" H 7400 4850 50  0001 C CNN
+F 3 "" H 7400 4850 50  0001 C CNN
+	1    7400 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4950 8350 4950
+Text Label 8050 4950 0    50   ~ 0
+B8LED
+$Comp
+L power:GND #PWR0120
+U 1 1 5D2B8074
+P 7750 5200
+F 0 "#PWR0120" H 7750 4950 50  0001 C CNN
+F 1 "GND" H 7755 5027 50  0000 C CNN
+F 2 "" H 7750 5200 50  0001 C CNN
+F 3 "" H 7750 5200 50  0001 C CNN
+	1    7750 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 5150 7750 5200
+Wire Wire Line
+	7300 4650 7650 4650
+Wire Wire Line
+	7300 4750 7400 4750
+Wire Wire Line
+	7400 4750 7400 4850
+$Comp
+L Transistor_FET:BSS138 Q9
+U 1 1 5D2BA269
+P 9850 3600
+F 0 "Q9" H 9750 3450 50  0000 R CNN
+F 1 "Si2302CDS" H 9750 3350 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 10050 3525 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 9850 3600 50  0001 L CNN
+	1    9850 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J14
+U 1 1 5D2BA270
+P 9100 3200
+F 0 "J14" H 9050 3450 50  0000 L CNN
+F 1 "Conn_01x04" H 9180 3101 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight" H 9100 3200 50  0001 C CNN
+F 3 "~" H 9100 3200 50  0001 C CNN
+	1    9100 3200
+	-1   0    0    -1  
+$EndComp
+Text Notes 8800 3250 0    50   ~ 0
+B9
+Wire Wire Line
+	9300 3100 9650 3100
+Text Label 9500 3100 0    50   ~ 0
+B9
+Text Label 9400 3300 0    50   ~ 0
+LED+
+$Comp
+L power:GND #PWR0121
+U 1 1 5D2BA27C
+P 9400 3500
+F 0 "#PWR0121" H 9400 3250 50  0001 C CNN
+F 1 "GND" H 9405 3327 50  0000 C CNN
+F 2 "" H 9400 3500 50  0001 C CNN
+F 3 "" H 9400 3500 50  0001 C CNN
+	1    9400 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 3600 10350 3600
+Text Label 10050 3600 0    50   ~ 0
+B9LED
+$Comp
+L power:GND #PWR0122
+U 1 1 5D2BA285
+P 9750 3850
+F 0 "#PWR0122" H 9750 3600 50  0001 C CNN
+F 1 "GND" H 9755 3677 50  0000 C CNN
+F 2 "" H 9750 3850 50  0001 C CNN
+F 3 "" H 9750 3850 50  0001 C CNN
+	1    9750 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 3800 9750 3850
+Wire Wire Line
+	9300 3300 9650 3300
+Wire Wire Line
+	9300 3400 9400 3400
+Wire Wire Line
+	9400 3400 9400 3500
+$Comp
+L Jumper:SolderJumper_3_Open JP1
+U 1 1 5D2C1B5B
+P 7200 1650
+F 0 "JP1" H 7200 1764 50  0000 C CNN
+F 1 "SolderJumper_3_Open" H 7200 1764 50  0001 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 7200 1650 50  0001 C CNN
+F 3 "~" H 7200 1650 50  0001 C CNN
+	1    7200 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0123
+U 1 1 5D2C2163
+P 6050 1300
+F 0 "#PWR0123" H 6050 1150 50  0001 C CNN
+F 1 "+5V" H 6065 1473 50  0000 C CNN
+F 2 "" H 6050 1300 50  0001 C CNN
+F 3 "" H 6050 1300 50  0001 C CNN
+	1    6050 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1500 6050 1500
+Wire Wire Line
+	6050 1500 6050 1300
+$Comp
+L power:GND #PWR0124
+U 1 1 5D2CA271
+P 3700 1450
+F 0 "#PWR0124" H 3700 1200 50  0001 C CNN
+F 1 "GND" H 3705 1277 50  0000 C CNN
+F 2 "" H 3700 1450 50  0001 C CNN
+F 3 "" H 3700 1450 50  0001 C CNN
+	1    3700 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 1400 4150 1400
+Wire Wire Line
+	3700 1400 3700 1450
+Wire Wire Line
+	4250 1500 4150 1500
+Wire Wire Line
+	4150 1500 4150 1400
+Connection ~ 4150 1400
+Wire Wire Line
+	4150 1400 3700 1400
+$Comp
+L power:GND #PWR0125
+U 1 1 5D2D27CD
+P 5850 1200
+F 0 "#PWR0125" H 5850 950 50  0001 C CNN
+F 1 "GND" H 5855 1027 50  0000 C CNN
+F 2 "" H 5850 1200 50  0001 C CNN
+F 3 "" H 5850 1200 50  0001 C CNN
+	1    5850 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1300 5700 1300
+Wire Wire Line
+	5700 1300 5700 1150
+Wire Wire Line
+	5700 1150 5850 1150
+Wire Wire Line
+	5850 1150 5850 1200
+$Comp
+L power:VBUS #PWR0126
+U 1 1 5D2D8AAE
+P 5500 1100
+F 0 "#PWR0126" H 5500 950 50  0001 C CNN
+F 1 "VBUS" H 5515 1273 50  0000 C CNN
+F 2 "" H 5500 1100 50  0001 C CNN
+F 3 "" H 5500 1100 50  0001 C CNN
+	1    5500 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1200 5500 1200
+Wire Wire Line
+	5500 1200 5500 1100
+$Comp
+L power:VBUS #PWR0127
+U 1 1 5D2E295F
+P 6850 1600
+F 0 "#PWR0127" H 6850 1450 50  0001 C CNN
+F 1 "VBUS" H 6865 1773 50  0000 C CNN
+F 2 "" H 6850 1600 50  0001 C CNN
+F 3 "" H 6850 1600 50  0001 C CNN
+	1    6850 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 1950 7550 1950
+Text Label 7300 1950 0    50   ~ 0
+LED+
+Wire Wire Line
+	7200 1950 7200 1800
+Wire Wire Line
+	7000 1650 6850 1650
+Wire Wire Line
+	6850 1650 6850 1600
+$Comp
+L power:+12V #PWR0128
+U 1 1 5D2FE6E2
+P 7550 1600
+F 0 "#PWR0128" H 7550 1450 50  0001 C CNN
+F 1 "+12V" H 7565 1773 50  0000 C CNN
+F 2 "" H 7550 1600 50  0001 C CNN
+F 3 "" H 7550 1600 50  0001 C CNN
+	1    7550 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 1650 7550 1650
+Wire Wire Line
+	7550 1650 7550 1600
+$Comp
+L Connector_Generic:Conn_01x02 J13
+U 1 1 5D302300
+P 8300 1600
+F 0 "J13" H 8300 1750 50  0000 C CNN
+F 1 "Conn_01x02" H 8380 1501 50  0001 L CNN
+F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 8300 1600 50  0001 C CNN
+F 3 "~" H 8300 1600 50  0001 C CNN
+	1    8300 1600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0129
+U 1 1 5D30602F
+P 8650 1800
+F 0 "#PWR0129" H 8650 1550 50  0001 C CNN
+F 1 "GND" H 8655 1627 50  0000 C CNN
+F 2 "" H 8650 1800 50  0001 C CNN
+F 3 "" H 8650 1800 50  0001 C CNN
+	1    8650 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0130
+U 1 1 5D309C0E
+P 8650 1500
+F 0 "#PWR0130" H 8650 1350 50  0001 C CNN
+F 1 "+12V" H 8665 1673 50  0000 C CNN
+F 2 "" H 8650 1500 50  0001 C CNN
+F 3 "" H 8650 1500 50  0001 C CNN
+	1    8650 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 1700 8650 1700
+Wire Wire Line
+	8650 1700 8650 1800
+Wire Wire Line
+	8500 1600 8650 1600
+Wire Wire Line
+	8650 1600 8650 1500
+$Comp
+L Mechanical:MountingHole MH1
+U 1 1 5D3205A2
+P 1050 6800
+F 0 "MH1" H 1150 6846 50  0000 L CNN
+F 1 "MountingHole" H 1150 6755 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 1050 6800 50  0001 C CNN
+F 3 "~" H 1050 6800 50  0001 C CNN
+	1    1050 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole MH2
+U 1 1 5D3207FA
+P 1050 7150
+F 0 "MH2" H 1150 7196 50  0000 L CNN
+F 1 "MountingHole" H 1150 7105 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 1050 7150 50  0001 C CNN
+F 3 "~" H 1050 7150 50  0001 C CNN
+	1    1050 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole MH3
+U 1 1 5D3244C5
+P 2000 6800
+F 0 "MH3" H 2100 6846 50  0000 L CNN
+F 1 "MountingHole" H 2100 6755 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 2000 6800 50  0001 C CNN
+F 3 "~" H 2000 6800 50  0001 C CNN
+	1    2000 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole MH4
+U 1 1 5D3244CC
+P 2000 7150
+F 0 "MH4" H 2100 7196 50  0000 L CNN
+F 1 "MountingHole" H 2100 7105 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3" H 2000 7150 50  0001 C CNN
+F 3 "~" H 2000 7150 50  0001 C CNN
+	1    2000 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Open JP2
+U 1 1 5D3299AA
+P 9650 4500
+F 0 "JP2" H 9650 4614 50  0000 C CNN
+F 1 "SolderJumper_3_Open" H 9650 4614 50  0001 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 9650 4500 50  0001 C CNN
+F 3 "~" H 9650 4500 50  0001 C CNN
+	1    9650 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 4500 10150 4500
+Text Label 9900 4500 0    50   ~ 0
+QE1A
+Wire Wire Line
+	9150 4500 9450 4500
+Text Label 9200 4500 0    50   ~ 0
+B9
+Wire Wire Line
+	9650 4650 9650 4700
+Wire Wire Line
+	9650 4700 10150 4700
+Text Label 9900 4700 0    50   ~ 0
+PIN1
+$Comp
+L Jumper:SolderJumper_3_Open JP3
+U 1 1 5D35236A
+P 9650 5000
+F 0 "JP3" H 9650 5114 50  0000 C CNN
+F 1 "SolderJumper_3_Open" H 9650 5114 50  0001 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 9650 5000 50  0001 C CNN
+F 3 "~" H 9650 5000 50  0001 C CNN
+	1    9650 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 5000 10150 5000
+Text Label 9900 5000 0    50   ~ 0
+QE1B
+Wire Wire Line
+	9150 5000 9450 5000
+Text Label 9200 5000 0    50   ~ 0
+B9LED
+Wire Wire Line
+	9650 5150 9650 5200
+Wire Wire Line
+	9650 5200 10150 5200
+Text Label 9900 5200 0    50   ~ 0
+PIN0
+$Comp
+L Jumper:SolderJumper_3_Open JP4
+U 1 1 5D356F10
+P 9650 5500
+F 0 "JP4" H 9650 5614 50  0000 C CNN
+F 1 "SolderJumper_3_Open" H 9650 5614 50  0001 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 9650 5500 50  0001 C CNN
+F 3 "~" H 9650 5500 50  0001 C CNN
+	1    9650 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 5500 10150 5500
+Text Label 9900 5500 0    50   ~ 0
+QE2A
+Wire Wire Line
+	9150 5500 9450 5500
+Text Label 9200 5500 0    50   ~ 0
+B8
+Wire Wire Line
+	9650 5650 9650 5700
+Wire Wire Line
+	9650 5700 10150 5700
+Text Label 9900 5700 0    50   ~ 0
+PIN2
+$Comp
+L Jumper:SolderJumper_3_Open JP5
+U 1 1 5D356F1E
+P 9650 6000
+F 0 "JP5" H 9650 6114 50  0000 C CNN
+F 1 "SolderJumper_3_Open" H 9650 6114 50  0001 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 9650 6000 50  0001 C CNN
+F 3 "~" H 9650 6000 50  0001 C CNN
+	1    9650 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 6000 10150 6000
+Text Label 9900 6000 0    50   ~ 0
+QE2B
+Wire Wire Line
+	9150 6000 9450 6000
+Text Label 9200 6000 0    50   ~ 0
+B8LED
+Wire Wire Line
+	9650 6150 9650 6200
+Wire Wire Line
+	9650 6200 10150 6200
+Text Label 9900 6200 0    50   ~ 0
+PIN3
+Wire Wire Line
+	1350 3150 1800 3150
+Wire Wire Line
+	1800 3150 1800 3350
+Wire Wire Line
+	3300 3150 3750 3150
+Wire Wire Line
+	3750 3150 3750 3350
+Wire Wire Line
+	1350 4500 1800 4500
+Wire Wire Line
+	1800 4500 1800 4700
+Wire Wire Line
+	3300 4500 3750 4500
+Wire Wire Line
+	3750 4500 3750 4700
+Wire Wire Line
+	5350 3200 5800 3200
+Wire Wire Line
+	5800 3200 5800 3400
+Wire Wire Line
+	5350 4550 5800 4550
+Wire Wire Line
+	5800 4550 5800 4750
+Wire Wire Line
+	7300 4550 7750 4550
+Wire Wire Line
+	7750 4550 7750 4750
+Wire Wire Line
+	7300 3200 7750 3200
+Wire Wire Line
+	7750 3200 7750 3400
+Wire Wire Line
+	9300 3200 9750 3200
+Wire Wire Line
+	9750 3200 9750 3400
+$EndSCHEMATC
