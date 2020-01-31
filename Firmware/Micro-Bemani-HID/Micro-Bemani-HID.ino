@@ -120,7 +120,7 @@ void processEncoder1()
 void light_update(SingleLED* single_leds, RGBLed* rgb_leds)
 {
   for (int i = 0; i < NUM_SINGLE_LED; i++) {
-    lightStatus[i] = single_leds->brightness > 0 ? true : false;
+    lightStatus[i] = single_leds[i].brightness > 0 ? true : false;
   }
   //  for (int i = 0; i < NUM_RGB_LED; i++) {
   //    // Do nothing

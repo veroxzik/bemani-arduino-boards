@@ -16,6 +16,7 @@ const uint16_t pulseCount = 24;
 
 // Uncomment the corresponding define for the microcontroller you are using
 //#define USE_MICRO
+//#define USE_MICRORGB
 //#define USE_PROMICRO
 
 
@@ -42,6 +43,21 @@ uint8_t ledPins[] = {11, 9, 7, 5, MOSI, A0, A1, A3, A5, SCK, 0, 3};
 // These cannot be changed, as they are linked to interrupt pins.
 uint8_t encoderPins[] = {2, 3, 0, 1};
 #define NUM_SINGLE_LED (12 - NUM_ENCODERS)
+
+#elif defined(USE_MICRORGB)
+
+// Pins for the buttons
+// If using the breakout boards, these aleady in the correct order to correspond with B1-B11.
+uint8_t numButtons = (11 - NUM_ENCODERS);
+uint8_t buttonPins[] = {12, 10, 8, 6, 4, SS, 13, A2, A4, 1, 2};
+uint8_t ledPins[] = {11, 9, 7, 5, MISO, A0, A1, A3, A5, 0, 3};
+
+// Pins for the Encoders
+// QE1 is pins 0 and 1
+// QE2 is pins 2 and 3
+// These cannot be changed, as they are linked to interrupt pins.
+uint8_t encoderPins[] = {2, 3, 0, 1};
+#define NUM_SINGLE_LED (11 - NUM_ENCODERS)
 
 #elif defined(USE_PROMICRO)
 // Pins for the buttons
