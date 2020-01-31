@@ -74,6 +74,10 @@ void setup()
   // Setup Buttons
   for (int i = 0; i < numButtons; i++)
     pinMode(buttonPins[i], INPUT_PULLUP);
+
+  // Setup Lights
+  for (int i = 0; i < NUM_SINGLE_LED; i++)
+    pinMode(ledPins[i], OUTPUT);
 }
 
 void loop()
