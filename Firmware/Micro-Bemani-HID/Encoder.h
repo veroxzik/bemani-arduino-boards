@@ -12,14 +12,14 @@
 class Encoder
 {
   private:
-    int8_t position;
+    int16_t position;
     uint8_t state;
     uint8_t pins[2];
-    uint8_t range;
+    uint16_t range;
 
   public:
-    Encoder(uint8_t maxRange, uint8_t pinA, uint8_t pinB);
-    int8_t getPosition() { return position; };
+    Encoder(uint16_t maxRange, uint8_t pinA, uint8_t pinB);
+    int16_t getPosition() { return position; };
     void updateState();
     void updateEncoder();
 };

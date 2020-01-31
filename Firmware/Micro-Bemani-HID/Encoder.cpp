@@ -1,7 +1,8 @@
 #include "Encoder.h"
 
-Encoder::Encoder(uint8_t maxRange, uint8_t pinA, uint8_t pinB)
+Encoder::Encoder(uint16_t maxRange, uint8_t pinA, uint8_t pinB)
 {
+  position = 0;
   range = maxRange;
   pins[0] = pinA;
   pins[1] = pinB;
@@ -17,10 +18,10 @@ void Encoder::updateState()
 void Encoder::updateEncoder()
 {
   uint8_t newState = GET_ENCODER(pins[0], pins[1]);
-  int8_t tempPosition = position;
-  uint8_t state = state | (newState << 2);
+  int16_t tempPosition = position;
+  uint8_t tempState = state | (newState << 2);
   state = newState;
-  switch (state) {
+  switch (tempState) {
     case 1: case 7: case 8: case 14:
       position++;
       break;
@@ -34,8 +35,8 @@ void Encoder::updateEncoder()
       position -= 2;
       break;
   }
-  if (position < -range / 2)
-    position += range;
-  else if (position > range / 2)
-    position -= range;
+  if (position < -(int16_t)range / 2)
+    position += (int16_t)range;
+  else if (position > (int16_t)range / 2)
+    position -= (int16_t)range;
 }

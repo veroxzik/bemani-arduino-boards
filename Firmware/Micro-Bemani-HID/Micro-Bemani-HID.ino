@@ -47,8 +47,8 @@ void setup()
   Serial.begin(115200);
 
   // Setup Joystick
-  Joystick.setXAxisRange(-pulseCount / 2, pulseCount / 2);
-  Joystick.setYAxisRange(-pulseCount / 2, pulseCount / 2);
+  Joystick.setXAxisRange(-(int16_t)pulseCount / 2, (int16_t)pulseCount / 2);
+  Joystick.setYAxisRange(-(int16_t)pulseCount / 2, (int16_t)pulseCount / 2);
   Joystick.begin(false);
   Joystick.setXAxis(0);
   Joystick.setYAxis(0);
