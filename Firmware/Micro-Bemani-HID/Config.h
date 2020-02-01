@@ -14,11 +14,14 @@
 // Common values are 600 for Chinese encoders and 24 for Bourns encoders
 const uint16_t pulseCount = 24;
 
-// Encoder mode
-// Uncomment ENCODER_JOYSTICK to use the Joystick X-Y axes for analog.
-// Uncomment ENCODER_MOUSE to use the Mouse X-Y axes for analog.
-//#define ENCODER_JOYSTICK
-//#define ENCODER_MOUSE
+// Input mode
+// Uncomment INPUT_KEYBOARDMOUSE to use keyboard buttons as defined below and Mouse X-Y axes for analog.
+// Uncomment INPUT_JOYSTICK for Joystick buttons and X-Y axes for analog.
+//#define INPUT_KEYBOARDMOUSE
+//#define INPUT_JOYSTICK
+
+// If using Keyboard mode, this array reports back the keys corresponding to buttons 1-12
+const char buttonKeys[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' , 'j' , 'k', 'l'};
 
 // If using Mouse Mode, set this number higher to increase the multiplier that is applied per turn.
 #define MOUSE_MULTIPLIER 1
@@ -90,11 +93,8 @@ uint8_t encoderPins[] = {0, 1, 2, 3};
 #error "Board Not Defined in Confing.h"
 #endif
 
-// Analog error
-#if NUM_ENCODERS > 0
-#if !defined(ENCODER_JOYSTICK) && !defined(ENCODER_MOUSE)
-#error "Must define either Joystick Mode or Mouse Mode"
-#endif
+#if (!defined(INPUT_KEYBOARDMOUSE) && !defined(INPUT_JOYSTICK)) || (defined(INPUT_KEYBOARDMOUSE) && defined(INPUT_JOYSTICK))
+#error "Must select either Keyboard+Mouse or Joystick mode (but not both)"
 #endif
 
 // This board does not support RGB

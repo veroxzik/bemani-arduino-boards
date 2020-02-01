@@ -10,11 +10,15 @@
 
    --- --- --- --- --- --- --- --- --- --- --- --- */
 
-#include <Joystick.h>
-#include <Mouse.h>
 #include "Config.h"
 #include "Encoder.h"
 
+#if defined(INPUT_KEYBOARDMOUSE)
+#include <Mouse.h>
+#include <Keyboard.h>
+#elif defined(INPUT_JOYSTICK)
+#include <Joystick.h>
+#endif
 
 // Encoders
 extern uint8_t encoderPins[];
@@ -32,9 +36,10 @@ Encoder *encoders[] = {
 // Buttons
 extern uint8_t buttonPins[];
 extern uint8_t numButtons;
-
+#if defined(INPUT_JOYSTICK)
 Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID, JOYSTICK_TYPE_GAMEPAD, numButtons, 0,
                    true, true, false, false, false, false, false, false, false, false, false);
+#endif
 
 #include "HIDLED.h"
 
@@ -47,12 +52,17 @@ void setup()
 {
   Serial.begin(115200);
 
+#if defined(INPUT_JOYSTICK)
   // Setup Joystick
   Joystick.setXAxisRange(-(int16_t)pulseCount / 2, (int16_t)pulseCount / 2);
   Joystick.setYAxisRange(-(int16_t)pulseCount / 2, (int16_t)pulseCount / 2);
   Joystick.begin(false);
   Joystick.setXAxis(0);
   Joystick.setYAxis(0);
+#elif defined(INPUT_KEYBOARDMOUSE)
+  Mouse.begin();
+  Keyboard.begin();
+#endif
 
   // Setup Encoders
 #if NUM_ENCODERS > 0
@@ -60,10 +70,6 @@ void setup()
 #if NUM_ENCODERS > 1
   encoders[1]->updateState();
 #endif
-#endif
-
-#ifdef ENCODER_MOUSE
-  Mouse.begin();
 #endif
 
   // It's not possible to attach interrupts (well) inside classes, unfortunately
@@ -92,9 +98,21 @@ void loop()
   {
     uint8_t buttonState = digitalRead(buttonPins[i]);
     if (buttonState)
+    {
+#if defined(INPUT_KEYBOARDMOUSE)
+      Keyboard.release(buttonKeys[i]);
+#elif defined(INPUT_JOYSTICK)
       Joystick.releaseButton(i);
+#endif
+    }
     else
+    {
+#if defined(INPUT_KEYBOARDMOUSE)
+      Keyboard.press(buttonKeys[i]);
+#elif defined(INPUT_JOYSTICK)
       Joystick.pressButton(i);
+#endif
+    }
 
     // Set reactive lights
 #if !defined(HID_LIGHTS)
@@ -103,14 +121,14 @@ void loop()
   }
 
   // Write analog values
-#if defined(ENCODER_JOYSTICK)
+#if defined(INPUT_JOYSTICK)
 #if NUM_ENCODERS > 0
 #if NUM_ENCODERS > 1
   Joystick.setXAxis(encoders[0]->getPosition());
 #endif
   Joystick.setYAxis(encoders[1]->getPosition());
 #endif
-#elif defined(ENCODER_MOUSE)
+#elif defined(INPUT_KEYBOARDMOUSE)
   signed char mouseX = 0, mouseY = 0;
 #if NUM_ENCODERS > 0
 #if NUM_ENCODERS > 1
@@ -121,7 +139,9 @@ void loop()
   Mouse.move(mouseX, mouseY, 0);
 #endif
 
+#if defined(INPUT_JOYSTICK)
   Joystick.sendState();
+#endif
 
   // Set lights
 #if defined(HID_LIGHTS)
