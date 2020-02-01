@@ -7,12 +7,21 @@
 
 // This is the number of encoders you are using.
 // If it is 1 and you are using a Micro board, then you must use QE2.
-// If it is 1 and you are using a Pro Micro board, then you must use QE1
+// If it is 1 and you are using a Pro Micro board, then you must use QE1.
 #define NUM_ENCODERS 0
 
 // This is the PPR of your encoder
 // Common values are 600 for Chinese encoders and 24 for Bourns encoders
 const uint16_t pulseCount = 24;
+
+// Encoder mode
+// Uncomment ENCODER_JOYSTICK to use the Joystick X-Y axes for analog.
+// Uncomment ENCODER_MOUSE to use the Mouse X-Y axes for analog.
+//#define ENCODER_JOYSTICK
+//#define ENCODER_MOUSE
+
+// If using Mouse Mode, set this number higher to increase the multiplier that is applied per turn.
+#define MOUSE_MULTIPLIER 1
 
 // Uncomment the corresponding define for the microcontroller you are using
 //#define USE_MICRO
@@ -75,6 +84,13 @@ uint8_t encoderPins[] = {0, 1, 2, 3};
 
 #else
 #error "Board Not Defined in Confing.h"
+#endif
+
+// Analog error
+#if NUM_ENCODERS > 0
+#if !defined(ENCODER_JOYSTICK) && !defined(ENCODER_MOUSE)
+#error "Must define either Joystick Mode or Mouse Mode"
+#endif
 #endif
 
 // This board does not support RGB

@@ -11,6 +11,7 @@
    --- --- --- --- --- --- --- --- --- --- --- --- */
 
 #include <Joystick.h>
+#include <Mouse.h>
 #include "Config.h"
 #include "Encoder.h"
 
@@ -61,6 +62,10 @@ void setup()
 #endif
 #endif
 
+#ifdef ENCODER_MOUSE
+  Mouse.begin();
+#endif
+
   // It's not possible to attach interrupts (well) inside classes, unfortunately
 #if NUM_ENCODERS > 0
   attachInterrupt(digitalPinToInterrupt(encoderPins[0]), processEncoder0, CHANGE);
@@ -93,11 +98,22 @@ void loop()
   }
 
   // Write analog values
+#if defined(ENCODER_JOYSTICK)
 #if NUM_ENCODERS > 0
 #if NUM_ENCODERS > 1
   Joystick.setXAxis(encoders[0]->getPosition());
 #endif
   Joystick.setYAxis(encoders[1]->getPosition());
+#endif
+#elif defined(ENCODER_MOUSE)
+  signed char mouseX = 0, mouseY = 0;
+#if NUM_ENCODERS > 0
+#if NUM_ENCODERS > 1
+  mouseX = encoders[0]->getDelta() * MOUSE_MULTIPLIER;
+#endif
+  mouseY = encoders[1]->getDelta() * MOUSE_MULTIPLIER;
+#endif
+  Mouse.move(mouseX, mouseY, 0);
 #endif
 
   Joystick.sendState();

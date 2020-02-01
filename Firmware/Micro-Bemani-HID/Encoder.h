@@ -17,11 +17,17 @@ class Encoder
     uint8_t pins[2];
     uint16_t range;
 
+    int16_t delta;
+
   public:
     Encoder(uint16_t maxRange, uint8_t pinA, uint8_t pinB);
-    int16_t getPosition() { return position; };
+    int16_t getPosition() {
+      return position;
+    };
     void updateState();
     void updateEncoder();
+
+    int16_t getDelta();
 };
 
 #endif

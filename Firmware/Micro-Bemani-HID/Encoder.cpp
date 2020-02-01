@@ -24,19 +24,30 @@ void Encoder::updateEncoder()
   switch (tempState) {
     case 1: case 7: case 8: case 14:
       position++;
+      delta++;
       break;
     case 2: case 4: case 11: case 13:
       position--;
+      delta--;
       break;
     case 3: case 12:
       position += 2;
+      delta += 2;
       break;
     case 6: case 9:
       position -= 2;
+      delta -= 2;
       break;
   }
   if (position < -(int16_t)range / 2)
     position += (int16_t)range;
   else if (position > (int16_t)range / 2)
     position -= (int16_t)range;
+}
+
+int16_t Encoder::getDelta()
+{
+  int16_t tempDelta = delta;
+  delta = 0;
+  return tempDelta;
 }
