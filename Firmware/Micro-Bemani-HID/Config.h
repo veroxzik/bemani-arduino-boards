@@ -23,6 +23,10 @@ const uint16_t pulseCount = 24;
 // If using Mouse Mode, set this number higher to increase the multiplier that is applied per turn.
 #define MOUSE_MULTIPLIER 1
 
+// Light Mode
+// Uncomment this line for HID lights, leave commented for reactive lights
+//#define HID_LIGHTS
+
 // Uncomment the corresponding define for the microcontroller you are using
 //#define USE_MICRO
 //#define USE_MICRORGB

@@ -95,6 +95,11 @@ void loop()
       Joystick.releaseButton(i);
     else
       Joystick.pressButton(i);
+
+    // Set reactive lights
+#if !defined(HID_LIGHTS)
+    digitalWrite(ledPins[i], buttonState ? LOW : HIGH);
+#endif
   }
 
   // Write analog values
@@ -119,8 +124,11 @@ void loop()
   Joystick.sendState();
 
   // Set lights
+#if defined(HID_LIGHTS)
   for (int i = 0; i < NUM_SINGLE_LED; i++)
     digitalWrite(ledPins[i], lightStatus[i]);
+#endif
+
 }
 
 void processEncoder0()
