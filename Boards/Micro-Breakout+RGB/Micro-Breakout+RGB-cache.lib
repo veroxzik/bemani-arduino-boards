@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Generic:Conn_01x02
+# Connector_Generic_Conn_01x02
 #
-DEF Connector_Generic:Conn_01x02 J 0 40 Y N 1 F N
+DEF Connector_Generic_Conn_01x02 J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Generic:Conn_01x02" 0 -200 50 H V C CNN
+F1 "Connector_Generic_Conn_01x02" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -20,11 +20,11 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic:Conn_01x04
+# Connector_Generic_Conn_01x04
 #
-DEF Connector_Generic:Conn_01x04 J 0 40 Y N 1 F N
+DEF Connector_Generic_Conn_01x04 J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Generic:Conn_01x04" 0 -300 50 H V C CNN
+F1 "Connector_Generic_Conn_01x04" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -43,11 +43,11 @@ X Pin_4 4 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic:Conn_01x17
+# Connector_Generic_Conn_01x17
 #
-DEF Connector_Generic:Conn_01x17 J 0 40 Y N 1 F N
+DEF Connector_Generic_Conn_01x17 J 0 40 Y N 1 F N
 F0 "J" 0 900 50 H V C CNN
-F1 "Connector_Generic:Conn_01x17" 0 -900 50 H V C CNN
+F1 "Connector_Generic_Conn_01x17" 0 -900 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -92,11 +92,11 @@ X Pin_9 9 -200 0 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Jumper:SolderJumper_3_Open
+# Jumper_SolderJumper_3_Open
 #
-DEF Jumper:SolderJumper_3_Open JP 0 0 Y N 1 F N
+DEF Jumper_SolderJumper_3_Open JP 0 0 Y N 1 F N
 F0 "JP" -100 -100 50 H V C CNN
-F1 "Jumper:SolderJumper_3_Open" 0 110 50 H V C CNN
+F1 "Jumper_SolderJumper_3_Open" 0 110 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -119,11 +119,11 @@ X B 3 200 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Mechanical:MountingHole
+# Mechanical_MountingHole
 #
-DEF Mechanical:MountingHole MH 0 40 Y Y 1 F N
-F0 "MH" 0 200 50 H V C CNN
-F1 "Mechanical:MountingHole" 0 125 50 H V C CNN
+DEF Mechanical_MountingHole H 0 40 Y Y 1 F N
+F0 "H" 0 200 50 H V C CNN
+F1 "Mechanical_MountingHole" 0 125 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -134,14 +134,14 @@ C 0 0 50 0 1 50 N
 ENDDRAW
 ENDDEF
 #
-# Transistor_FET:BSS138
+# Transistor_FET_BSS138
 #
-DEF Transistor_FET:BSS138 Q 0 0 Y N 1 F N
+DEF Transistor_FET_BSS138 Q 0 0 Y N 1 F N
 F0 "Q" 200 75 50 H V L CNN
-F1 "Transistor_FET:BSS138" 200 0 50 H V L CNN
+F1 "Transistor_FET_BSS138" 200 0 50 H V L CNN
 F2 "Package_TO_SOT_SMD:SOT-23" 200 -75 50 H I L CIN
 F3 "" 0 0 50 H I L CNN
-ALIAS 2N7002 MMBF170
+ALIAS 2N7002 2N7002E 2N7002H 2N7002K BS170F BS870 BSN20 BSS123 BSS127S DMG2302U DMG3402L DMG3404L DMG3406L DMG3414U DMG3418L DMN10H220L DMN10H700S DMN13H750S DMN2041L DMN2050L DMN2056U DMN2058U DMN2075U DMN2230U DMN24H11DS DMN24H3D5L DMN3042L DMN3051L DMN30H4D0L DMN3110S DMN3150L DMN3300U DMN3404L DMN6075S DMN6140L DMN67D7L DMN67D8L MMBF170 VN10LF ZVN3306F ZVN3310F ZVN3320F ZVN4106F ZXM61N02F ZXM61N03F ZXMN10A07F ZXMN2A01F ZXMN2A14F ZXMN2B01F ZXMN2B14FH ZXMN2F30FH ZXMN2F34FH ZXMN3A01F ZXMN3A14F ZXMN3B01F ZXMN3B14F ZXMN3F30FH ZXMN6A07F IRLML2060
 $FPLIST
  SOT?23*
 $ENDFPLIST
@@ -169,11 +169,11 @@ X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# power:+12V
+# power_+12V
 #
-DEF power:+12V #PWR 0 0 Y Y 1 F P
+DEF power_+12V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+12V" 0 140 50 H V C CNN
+F1 "power_+12V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -184,11 +184,11 @@ X +12V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:+3.3V
+# power_+3.3V
 #
-DEF power:+3.3V #PWR 0 0 Y Y 1 F P
+DEF power_+3.3V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+3.3V" 0 140 50 H V C CNN
+F1 "power_+3.3V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 ALIAS +3.3V
@@ -200,11 +200,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:+5V
+# power_+5V
 #
-DEF power:+5V #PWR 0 0 Y Y 1 F P
+DEF power_+5V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+5V" 0 140 50 H V C CNN
+F1 "power_+5V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -215,31 +215,16 @@ X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:GND
+# power_GND
 #
-DEF power:GND #PWR 0 0 Y Y 1 F P
+DEF power_GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power:GND" 0 -150 50 H V C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power:VBUS
-#
-DEF power:VBUS #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:VBUS" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X VBUS 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #

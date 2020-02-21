@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:Micro-Breakout-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -759,17 +759,6 @@ F 3 "~" H 7000 1950 50  0001 C CNN
 	1    7000 1950
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VBUS #PWR0127
-U 1 1 5D2E295F
-P 6650 1900
-F 0 "#PWR0127" H 6650 1750 50  0001 C CNN
-F 1 "VBUS" H 6665 2073 50  0000 C CNN
-F 2 "" H 6650 1900 50  0001 C CNN
-F 3 "" H 6650 1900 50  0001 C CNN
-	1    6650 1900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7000 2250 7350 2250
 Text Label 7100 2250 0    50   ~ 0
@@ -1181,17 +1170,6 @@ Wire Wire Line
 Wire Wire Line
 	9800 3200 9800 3400
 $Comp
-L power:VBUS #PWR05
-U 1 1 5DBB01AE
-P 3300 2500
-F 0 "#PWR05" H 3300 2350 50  0001 C CNN
-F 1 "VBUS" H 3315 2673 50  0000 C CNN
-F 2 "" H 3300 2500 50  0001 C CNN
-F 3 "" H 3300 2500 50  0001 C CNN
-	1    3300 2500
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR04
 U 1 1 5DBB6221
 P 3250 1950
@@ -1217,14 +1195,6 @@ Wire Wire Line
 	4000 1050 3450 1050
 Wire Wire Line
 	3450 1050 3450 950 
-Wire Wire Line
-	4000 2350 3500 2350
-Wire Wire Line
-	3500 2350 3500 2600
-Wire Wire Line
-	3500 2600 3300 2600
-Wire Wire Line
-	3300 2600 3300 2500
 Wire Wire Line
 	4000 2250 3000 2250
 Wire Wire Line
@@ -1425,4 +1395,15 @@ Wire Wire Line
 	9350 4500 9800 4500
 Wire Wire Line
 	9800 4500 9800 4700
+$Comp
+L power:+5V #PWR?
+U 1 1 5E51C7C8
+P 6650 1900
+F 0 "#PWR?" H 6650 1750 50  0001 C CNN
+F 1 "+5V" H 6665 2073 50  0000 C CNN
+F 2 "" H 6650 1900 50  0001 C CNN
+F 3 "" H 6650 1900 50  0001 C CNN
+	1    6650 1900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
