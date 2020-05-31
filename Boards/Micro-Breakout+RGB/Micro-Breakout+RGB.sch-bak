@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Micro-Breakout+RGB-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -220,12 +221,16 @@ Wire Wire Line
 Text Label 3700 1550 0    50   ~ 0
 B8LED
 Wire Wire Line
-	3650 2450 4000 2450
-Text Label 3700 2450 0    50   ~ 0
+	3650 1650 4000 1650
+Text Label 3700 1650 0    50   ~ 0
 B9
 Wire Wire Line
-	3650 1750 4000 1750
+	4000 1750 3650 1750
 Text Label 3700 1750 0    50   ~ 0
+B9LED
+Wire Wire Line
+	3650 2450 4000 2450
+Text Label 3700 2450 0    50   ~ 0
 B5LED
 $Comp
 L Transistor_FET:BSS138 Q2
@@ -1142,6 +1147,10 @@ Wire Wire Line
 	5500 1750 5150 1750
 Text Label 5450 1750 2    50   ~ 0
 B5
+Wire Wire Line
+	5500 2450 5150 2450
+Text Label 5450 2450 2    50   ~ 0
+B6
 $Comp
 L Jumper:SolderJumper_3_Open JP2
 U 1 1 5DD6D6A9
@@ -1369,12 +1378,4 @@ F 3 "" H 6250 1900 50  0001 C CNN
 	1    6250 1900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5150 2450 5500 2450
-Text Label 5450 2450 2    50   ~ 0
-B9LED
-Wire Wire Line
-	3650 1650 4000 1650
-Text Label 3700 1650 0    50   ~ 0
-B6
 $EndSCHEMATC
