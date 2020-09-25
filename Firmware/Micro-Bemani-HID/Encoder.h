@@ -25,7 +25,7 @@ class Encoder
       return position;
     };
     void updateState();
-    void updateEncoder();
+    bool updateEncoder();
 
     int16_t getDelta();
 };

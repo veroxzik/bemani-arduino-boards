@@ -11,6 +11,7 @@
    --- --- --- --- --- --- --- --- --- --- --- --- */
 
 #include "Config.h"
+#include "Globals.h"
 #include "Encoder.h"
 
 #if defined(INPUT_KEYBOARDMOUSE)
@@ -46,7 +47,11 @@ Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID, JOYSTICK_TYPE_GAMEPAD, numButtons
 // Lights
 bool lightStatus[NUM_SINGLE_LED];
 
-
+// SDVX LED Strip
+#if defined(USE_SDVX_LED_STRIP)
+#include "SdvxLedStrip.h"
+SdvxLedStrip ledStrip;
+#endif
 
 void setup()
 {
@@ -149,16 +154,33 @@ void loop()
     digitalWrite(ledPins[i], lightStatus[i]);
 #endif
 
+#if defined(USE_SDVX_LED_STRIP)
+  noInterrupts();
+  ledStrip.update();
+  interrupts();
+#endif
 }
 
 void processEncoder0()
 {
-  encoders[0]->updateEncoder();
+  bool dir = encoders[0]->updateEncoder();
+#if defined(USE_SDVX_LED_STRIP)
+  if (SDVX_REVERSE_KNOB)
+    ledStrip.setRightActive(SDVX_DIRECTION_RIGHT ? !dir : dir);
+  else
+    ledStrip.setLeftActive(SDVX_DIRECTION_LEFT ? !dir : dir);
+#endif
 }
 
 void processEncoder1()
 {
-  encoders[1]->updateEncoder();
+  bool dir = encoders[1]->updateEncoder();
+#if defined(USE_SDVX_LED_STRIP)
+  if (SDVX_REVERSE_KNOB)
+    ledStrip.setLeftActive(SDVX_DIRECTION_LEFT ? !dir : dir);
+  else
+    ledStrip.setRightActive(SDVX_DIRECTION_RIGHT ? !dir : dir);
+#endif
 }
 
 void light_update(SingleLED* single_leds, RGBLed* rgb_leds)
