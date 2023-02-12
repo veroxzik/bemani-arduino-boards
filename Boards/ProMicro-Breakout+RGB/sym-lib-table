@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "ProMicro-Breakout+RGB-rescue")(type "Legacy")(uri "${KIPRJMOD}/ProMicro-Breakout+RGB-rescue.lib")(options "")(descr ""))
+)
