@@ -2,3 +2,5 @@
 *.kicad_pcb-bak
 *.bak
 gerbers.zip
+*#auto_saved_files\#
+**/*-backups/*
