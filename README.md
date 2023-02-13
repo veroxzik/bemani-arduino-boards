@@ -1,6 +1,12 @@
 # bemani-arduino-boards
  A collection of Arduuino breakout boards and code for Bemani uses.
 
+## How to Order
+
+Download the *.zip file from your chosen Boards/gerbers folder and upload to your PCB manufacturer of choice. JLCPCB is a common suggestion and the one I use most frequently. Default choices are all acceptable.
+
+A list of parts for each board is located in their respective folders.
+
 ## Physical Settings on the Boards
 
 Each board has a few physical solder jumpers that you must set before use.
